@@ -165,7 +165,7 @@ async def handle_message(message: types.Message):
         await message.reply("🔴 No sources or targets, monitoring stopped")
         return
     for target in targets:
-        await bot.send_message(target, message)
+        await bot.send_message(target, message.text)
     await message.reply(f"🟢 Message sent")
 
 if __name__ == '__main__':
